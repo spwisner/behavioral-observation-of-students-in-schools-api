@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 20170315005203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,51 @@ ActiveRecord::Schema.define(version: 2) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_examples_on_user_id", using: :btree
+  end
+
+  create_table "observations", force: :cascade do |t|
+    t.integer  "aet"
+    t.integer  "pet"
+    t.integer  "oft_m"
+    t.integer  "oft_v"
+    t.integer  "oft_p"
+    t.string   "obs_comment"
+    t.integer  "obs_num"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "session_id"
+    t.integer  "student_id"
+    t.index ["session_id"], name: "index_observations_on_session_id", using: :btree
+    t.index ["student_id"], name: "index_observations_on_student_id", using: :btree
+    t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.date     "obs_on"
+    t.string   "obs_setting"
+    t.string   "obs_task"
+    t.integer  "obs_time"
+    t.integer  "int_num"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "student_id"
+    t.index ["student_id"], name: "index_sessions_on_student_id", using: :btree
+    t.index ["user_id"], name: "index_sessions_on_user_id", using: :btree
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "born_on"
+    t.string   "school"
+    t.string   "teacher"
+    t.string   "grade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_students_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +79,10 @@ ActiveRecord::Schema.define(version: 2) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "observations", "sessions"
+  add_foreign_key "observations", "students"
+  add_foreign_key "observations", "users"
+  add_foreign_key "sessions", "students"
+  add_foreign_key "sessions", "users"
+  add_foreign_key "students", "users"
 end
