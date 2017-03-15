@@ -13,6 +13,8 @@ curl "${API}${URL_PATH}" \
       "obs_setting": "'"${OBS_SETTING}"'",
       "obs_task": "'"${OBS_TASK}"'",
       "obs_time": "'"${OBS_TIME}"'",
+      "int_num": "'"${INT_NUM}"'"
+    }
   }'
 
 echo

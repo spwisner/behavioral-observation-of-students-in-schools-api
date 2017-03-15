@@ -1,6 +1,6 @@
 
   API="${API_ORIGIN:-http://localhost:4741}"
-  URL_PATH="/students/${STUDENT_ID}/sessions/${SETTING_ID}/observations"
+  URL_PATH="/students/${STUDENT_ID}/sessions/${SESSION_ID}/observations"
   curl "${API}${URL_PATH}" \
     --include \
     --request POST \
@@ -19,3 +19,5 @@
     }'
 
 echo
+
+# STUDENT_ID=1 SESSION_ID=2 TOKEN="" AET=1 PET=1 OFT_M=1 OFT_P=1 OFT_V=1 OBS_COMMENT="NONE" OBS_NUM=1 sh scripts/observations/create.sh

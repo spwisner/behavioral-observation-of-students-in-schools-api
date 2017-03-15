@@ -19,3 +19,5 @@ curl "${API}${URL_PATH}" \
   }'
 
 echo
+
+# TOKEN="" FIRST_NAME="Z" LAST_NAME="Z" BORN_ON="2016-05-05" SCHOOL="Z" TEACHER="Z" GRADE="4" sh scripts/students/create.sh

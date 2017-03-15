@@ -11,8 +11,11 @@
         "obs_on": "'"${OBS_ON}"'",
         "obs_setting": "'"${OBS_SETTING}"'",
         "obs_task": "'"${OBS_TASK}"'",
-        "obs_time": "'"${OBS_TIME}"'"
+        "obs_time": "'"${OBS_TIME}"'",
+        "int_num": "'"${INT_NUM}"'"
       }
     }'
 
 echo
+
+#STUDENT_ID=1 TOKEN="" OBS_ON=2016-05-05 OBS_TASK="Z" OBS_SETTING="Z" OBS_TIME=3 INT_NUM=3 sh scripts/sessions/create.sh
