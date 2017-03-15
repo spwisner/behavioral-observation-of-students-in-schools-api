@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20170315005203) do
     t.integer  "obs_num"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "user_id"
-    t.integer  "session_id"
-    t.integer  "student_id"
+    t.integer  "user_id",     null: false
+    t.integer  "session_id",  null: false
+    t.integer  "student_id",  null: false
     t.index ["session_id"], name: "index_observations_on_session_id", using: :btree
     t.index ["student_id"], name: "index_observations_on_student_id", using: :btree
     t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20170315005203) do
     t.integer  "int_num"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "user_id"
-    t.integer  "student_id"
+    t.integer  "user_id",     null: false
+    t.integer  "student_id",  null: false
     t.index ["student_id"], name: "index_sessions_on_student_id", using: :btree
     t.index ["user_id"], name: "index_sessions_on_user_id", using: :btree
   end
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20170315005203) do
     t.string   "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.index ["user_id"], name: "index_students_on_user_id", using: :btree
   end
 
