@@ -8,7 +8,7 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "observation": {
-        "aet": "1",
+        "aet": "true",
         "pet": "true",
         "oft_m": "false",
         "oft_v": "true",

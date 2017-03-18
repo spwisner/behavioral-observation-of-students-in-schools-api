@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318084428) do
+ActiveRecord::Schema.define(version: 20170318081221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 20170318084428) do
   end
 
   create_table "observations", force: :cascade do |t|
+    t.boolean  "aet"
+    t.boolean  "pet"
+    t.boolean  "oft_m"
+    t.boolean  "oft_v"
+    t.boolean  "oft_p"
     t.string   "obs_comment"
     t.integer  "obs_num"
     t.datetime "created_at",  null: false
@@ -31,11 +36,6 @@ ActiveRecord::Schema.define(version: 20170318084428) do
     t.integer  "user_id",     null: false
     t.integer  "session_id",  null: false
     t.integer  "student_id",  null: false
-    t.boolean  "aet"
-    t.boolean  "pet"
-    t.boolean  "oft_m"
-    t.boolean  "oft_v"
-    t.boolean  "oft_p"
     t.index ["session_id"], name: "index_observations_on_session_id", using: :btree
     t.index ["student_id"], name: "index_observations_on_student_id", using: :btree
     t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
