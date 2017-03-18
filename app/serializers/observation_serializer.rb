@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
 class ObservationSerializer < ActiveModel::Serializer
-  attributes :id, :aet, :pet, :oft_m, :oft_v, :oft_p, :obs_comment, :obs_num
+  attributes :id, :aet, :pet, :oft_m, :oft_v, :oft_p, :obs_comment, :obs_num,
+             :editable
+
+  def editable
+    scope == object.user
+  end
 end

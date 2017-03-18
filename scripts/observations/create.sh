@@ -1,6 +1,6 @@
 
   API="${API_ORIGIN:-http://localhost:4741}"
-  URL_PATH="/students/${STUDENT_ID}/sessions/${SESSION_ID}/observations"
+  URL_PATH="/students/1/sessions/1/observations"
   curl "${API}${URL_PATH}" \
     --include \
     --request POST \
@@ -8,13 +8,13 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "observation": {
-        "aet": "'"${AET}"'",
-        "pet": "'"${PET}"'",
-        "oft_m": "'"${OFT_M}"'",
-        "oft_v": "'"${OFT_V}"'",
-        "oft_p": "'"${OFT_P}"'",
-        "obs_comment": "'"${OBS_COMMENT}"'",
-        "obs_num": "'"${OBS_NUM}"'"
+        "aet": "1",
+        "pet": "true",
+        "oft_m": "false",
+        "oft_v": "true",
+        "oft_p": "false",
+        "obs_comment": "none",
+        "obs_num": "1"
       }
     }'
 

@@ -1,7 +1,10 @@
-class SessionSerializer < ActiveModel::Serializer
-  attributes :id, :obs_on, :obs_setting, :obs_task, :obs_time, :int_num, :editable
+# frozen_string_literal: true
 
-def editable
-  scope == object.user
-end
+class SessionSerializer < ActiveModel::Serializer
+  attributes :id, :obs_on, :obs_setting, :obs_task, :obs_time, :int_num,
+             :comment, :editable
+
+  def editable
+    scope == object.user
+  end
 end
