@@ -56,6 +56,6 @@ class SessionsController < OpenReadController
   # Only allow a trusted parameter "white list" through.
   def session_params
     params.require(:session).permit(:obs_on, :obs_setting, :obs_task, :int_num,
-                                    :obs_time, :comment)
+                                    :obs_time, :comment, :completed)
   end
 end
