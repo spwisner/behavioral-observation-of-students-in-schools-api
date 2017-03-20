@@ -9,14 +9,26 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "student": {
-      "first_name": "'"${FIRST_NAME}"'",
-      "last_name": "'"${LAST_NAME}"'",
-      "born_on": "'"${BORN_ON}"'",
-      "school": "'"${SCHOOL}"'",
-      "teacher": "'"${TEACHER}"'",
-      "grade": "'"${GRADE}"'"
+      "first_name": "z",
+      "last_name": "z",
+      "born_on": "2016-01-01",
+      "school": "z",
+      "teacher": "z",
+      "grade": "z"
     }
   }'
+
+
+  # --data '{
+  #   "student": {
+  #     "first_name": "'"${FIRST_NAME}"'",
+  #     "last_name": "'"${LAST_NAME}"'",
+  #     "born_on": "'"${BORN_ON}"'",
+  #     "school": "'"${SCHOOL}"'",
+  #     "teacher": "'"${TEACHER}"'",
+  #     "grade": "'"${GRADE}"'"
+  #   }
+  # }'
 
 echo
 

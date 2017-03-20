@@ -1,6 +1,6 @@
 
   API="${API_ORIGIN:-http://localhost:4741}"
-  URL_PATH="/students/${STUDENT_ID}/sessions"
+  URL_PATH="/students/1/sessions"
   curl "${API}${URL_PATH}" \
     --include \
     --request POST \
@@ -8,13 +8,25 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "session": {
-        "obs_on": "'"${OBS_ON}"'",
-        "obs_setting": "'"${OBS_SETTING}"'",
-        "obs_task": "'"${OBS_TASK}"'",
-        "obs_time": "'"${OBS_TIME}"'",
-        "int_num": "'"${INT_NUM}"'"
+        "obs_on": "2016-01-01",
+        "obs_setting": "z",
+        "obs_task": "z",
+        "obs_time": "12",
+        "int_num": "3"
       }
     }'
+
+
+# URL_PATH="/students/${STUDENT_ID}/sessions"
+    # --data '{
+    #   "session": {
+    #     "obs_on": "'"${OBS_ON}"'",
+    #     "obs_setting": "'"${OBS_SETTING}"'",
+    #     "obs_task": "'"${OBS_TASK}"'",
+    #     "obs_time": "'"${OBS_TIME}"'",
+    #     "int_num": "'"${INT_NUM}"'"
+    #   }
+    # }'
 
 echo
 

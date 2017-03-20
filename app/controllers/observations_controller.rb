@@ -24,7 +24,26 @@ class ObservationsController < OpenReadController
     @observation = current_user.observations.build(observation_params)
     @observation.session = @session
     @observation.student = @student
-    if @observation.save
+
+    # Check if session completed
+    curr_session_id = @observation.session.id
+    curr_session_int_total = @session.int_num
+    curr_obs_num = @observation.obs_num
+    curr_count = Observation.where(session_id: curr_session_id).count
+    @observation.obs_num = curr_count + 1
+
+    if curr_session_int_total == curr_obs_num
+      @session.completed = true
+    else
+      @session.completed = false
+    end
+
+    save_observation = (@observation.obs_num <= curr_session_int_total)
+
+    # end of session completed
+
+    if @observation.save && save_observation
+      binding.pry
       render json: @observation, status: :created
     else
       render json: @observation.errors, status: :unprocessable_entity
