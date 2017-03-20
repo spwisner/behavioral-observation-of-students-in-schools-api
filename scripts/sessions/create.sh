@@ -8,7 +8,6 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "session": {
-        "obs_on": "2016-01-01",
         "obs_setting": "z",
         "obs_task": "z",
         "obs_time": "12",

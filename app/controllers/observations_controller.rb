@@ -41,7 +41,7 @@ class ObservationsController < OpenReadController
     save_observation = (@observation.obs_num <= curr_session_int_total)
 
     # end of session completed
-
+    binding.pry
     if @observation.save && save_observation
       binding.pry
       render json: @observation, status: :created
