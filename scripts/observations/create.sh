@@ -8,9 +8,6 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "observation": {
-        "oft_m": "false",
-        "oft_v": "true",
-        "oft_p": "false",
         "obs_comment": "none"
       }
     }'
