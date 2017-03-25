@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Rails.application.routes.draw do
   resources :sessions, except: [:new, :edit]
   resources :observations, only: [:index, :show, :destroy, :update, :create]
