@@ -1,6 +1,6 @@
 
   API="${API_ORIGIN:-http://localhost:4741}"
-  URL_PATH="/students/1/sessions/17/observations"
+  URL_PATH="/students/1/sessions/88/observations"
   curl "${API}${URL_PATH}" \
     --include \
     --request POST \

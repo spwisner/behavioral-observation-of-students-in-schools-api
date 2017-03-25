@@ -11,7 +11,7 @@
         "obs_setting": "z",
         "obs_task": "z",
         "obs_time": "12",
-        "int_num": "10"
+        "int_num": "2"
       }
     }'
 
