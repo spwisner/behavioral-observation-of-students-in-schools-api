@@ -3,6 +3,14 @@
 An API to store users, students, sessions, and observation intervals.
 It allows users to CRUD on students, sessions and observations.
 
+Link to the live application: [https://spw5235.github.io/behavioral-observation-of-students-in-schools](https://spw5235.github.io/behavioral-observation-of-students-in-schools)..
+
+Link to the front-end repository: [https://github.com/spw5235/behavioral-observation-of-students-in-schools](https://github.com/spw5235/behavioral-observation-of-students-in-schools).
+
+## ORM
+
+The relationship of this api is one to many.  That is, one user can have many notes.  For a visualization of this relationship, view the following link: [https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing](https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing).
+
 ## API end-points
 
 | Verb   |                         URI Pattern                        | Controller#Action     |
