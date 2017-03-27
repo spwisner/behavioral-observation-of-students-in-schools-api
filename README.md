@@ -7,9 +7,9 @@ Link to the live application: [https://spw5235.github.io/behavioral-observation-
 
 Link to the front-end repository: [https://github.com/spw5235/behavioral-observation-of-students-in-schools](https://github.com/spw5235/behavioral-observation-of-students-in-schools).
 
-## ORM
+## ERD
 
-The relationship of this api is one to many.  That is, one user can have many notes.  For a visualization of this relationship, view the following link: [https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing](https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing).
+The relationship of this api is one to many.  That is, one user can have many students, many settings, and many observations.  For a visualization of this relationship, view the following link: [https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing](https://drive.google.com/file/d/0B_Hv9u6cm8IVbWV2UW9uMU5HVHM/view?usp=sharing).
 
 ## API end-points
 
