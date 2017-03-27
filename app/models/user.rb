@@ -4,5 +4,6 @@ class User < ApplicationRecord
   has_many :examples
   has_many :students
   has_many :sessions
+  has_many :reports
   has_many :observations
 end

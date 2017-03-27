@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320132822) do
+ActiveRecord::Schema.define(version: 20170327150947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,25 @@ ActiveRecord::Schema.define(version: 20170320132822) do
     t.index ["session_id"], name: "index_observations_on_session_id", using: :btree
     t.index ["student_id"], name: "index_observations_on_student_id", using: :btree
     t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.string   "presenting_issue"
+    t.string   "class_behav_assess"
+    t.string   "r_setting"
+    t.string   "r_aet"
+    t.string   "r_pet"
+    t.string   "r_oftm"
+    t.string   "r_oftv"
+    t.string   "r_oftp"
+    t.string   "r_finding"
+    t.string   "r_customone"
+    t.string   "r_customtwo"
+    t.string   "r_customthree"
+    t.string   "r_recommendation"
+    t.string   "counselor_name"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "sessions", force: :cascade do |t|
