@@ -1,6 +1,6 @@
 
   API="${API_ORIGIN:-http://localhost:4741}"
-  URL_PATH="/students/1/sessions/228/reports"
+  URL_PATH="/students/1/sessions/231/reports"
   curl "${API}${URL_PATH}" \
     --include \
     --request POST \
@@ -8,7 +8,7 @@
     --header "Authorization: Token token=${TOKEN}" \
     --data '{
       "report": {
-        "presenting_issue": "z",
+        "presenting_issue": "dontcreate",
         "class_behav_assess": "z",
         "r_setting": "z",
         "r_aet": "12",

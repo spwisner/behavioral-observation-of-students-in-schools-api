@@ -7,8 +7,8 @@ class ReportsController < OpenReadController
 
   # GET /reports
   def index
-    @reports = @session.reports
-    render json: { reports: @reports }
+    @reports = @session.report
+    render json: @reports
   end
 
   # GET /reports/1
@@ -21,6 +21,9 @@ class ReportsController < OpenReadController
     @report = current_user.reports.build(report_params)
     @report.session = @session
     @report.student = @student
+
+    # @report_session_count = Report.where(session_id: @report.session.id).count
+    # @report_does_not_exist = (@report_session_count < 1)
 
     if @report.save
       render json: @report, status: :created, location: @report
