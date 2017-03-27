@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :reports, only: [:index, :show, :destroy, :update, :create]
+  resources :reports, except: [:new, :edit]
   resources :sessions, except: [:new, :edit]
   resources :observations, only: [:index, :show, :destroy, :update, :create]
   resources :students, except: [:new, :edit]
@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   post '/students/:student_id/sessions/:session_id/observations' => 'observations#create'
   get '/students/:student_id/sessions' => 'sessions#index'
   post '/students/:student_id/sessions' => 'sessions#create'
-  get '/sessions/:session_id/reports' => 'reports#index'
-  post '/sessions/:session_id/reports' => 'reports#create'
+  get '/students/:student_id/sessions/:session_id/reports' => 'reports#index'
+  post '/students/:student_id/sessions/:session_id/reports' => 'reports#create'
 end

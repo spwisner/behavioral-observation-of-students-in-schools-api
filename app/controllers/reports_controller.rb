@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class ReportsController < OpenReadController
-  before_action :set_session, only: [:index, :create]
   before_action :set_report, only: [:show, :update, :destroy]
+  before_action :set_student, only: [:index, :create]
+  before_action :set_session, only: [:index, :create]
 
   # GET /reports
   def index
@@ -17,10 +18,9 @@ class ReportsController < OpenReadController
 
   # POST /reports
   def create
-
-
     @report = current_user.reports.build(report_params)
     @report.session = @session
+    @report.student = @student
 
     if @report.save
       render json: @report, status: :created, location: @report
@@ -47,12 +47,17 @@ class ReportsController < OpenReadController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_report
-    @report = Report.where(id: params[:id], user: current_user).take
+
+  def set_student
+    @student = current_user.students.find(params[:student_id])
   end
 
   def set_session
-    @session = current_user.students.find(params[:session_id])
+    @session = current_user.sessions.find(params[:session_id])
+  end
+
+  def set_report
+    @report = Report.where(id: params[:id], user: current_user).take
   end
 
   # Only allow a trusted parameter "white list" through.
