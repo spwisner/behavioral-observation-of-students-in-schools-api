@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327161625) do
+ActiveRecord::Schema.define(version: 20170328175106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,9 @@ ActiveRecord::Schema.define(version: 20170327161625) do
     t.integer  "session_id"
     t.integer  "user_id"
     t.integer  "student_id"
+    t.string   "custom_one_title"
+    t.string   "custom_two_title"
+    t.string   "custom_three_title"
     t.index ["session_id"], name: "index_reports_on_session_id", using: :btree
     t.index ["student_id"], name: "index_reports_on_student_id", using: :btree
     t.index ["user_id"], name: "index_reports_on_user_id", using: :btree
