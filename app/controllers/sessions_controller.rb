@@ -31,6 +31,9 @@ class SessionsController < OpenReadController
 
   # PATCH/PUT /sessions/1
   def update
+    # @session = current_user.sessions.build(session_params)
+    # @session.student = @student
+
     if @session.update(session_params)
       render json: @session
     else
