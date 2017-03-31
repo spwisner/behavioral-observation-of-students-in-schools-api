@@ -17,16 +17,7 @@ The relationship of this api is one to many.  That is, one user can have many st
 
 ## Dependencies
 
-Chart.js was utiltized in this project for bar graphs comparing target students to random peers.  Charts.js is open source and provides detailed documentation with installation instructions:
-
-[http://www.chartjs.org/docs/](http://www.chartjs.org/docs/)
-
-
-Installation was completed via a single npm method:
-
-```
-npm install chart.js --save
-```
+No additional dependencies were used for the api portion of this project.
 
 ## Technologies Used
 
