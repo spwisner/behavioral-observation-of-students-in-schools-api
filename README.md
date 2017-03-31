@@ -11,9 +11,9 @@ Link to the heroku api: [https://behav-obs-of-students.herokuapp.com/](https://b
 
 ## ERD
 
-The relationship of this api is one to many.  That is, one user can have many students, many settings, and many observations.  For a visualization of this relationship, view the following link:
+The relationship of this api is one to many.  That is, one user can have many students, many settings, and many observations.  For a visualization of this relationship, view the following:
 
-https://cloud.githubusercontent.com/assets/13546265/24553797/6aa48118-15f9-11e7-8647-911ac7f9e1b4.png
+![alt text](https://cloud.githubusercontent.com/assets/13546265/24553797/6aa48118-15f9-11e7-8647-911ac7f9e1b4.png "ERD")
 
 ## Dependencies
 
