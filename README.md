@@ -3,9 +3,9 @@
 An API to store users, students, sessions, and observation intervals.
 It allows users to CRUD on students, sessions and observations.
 
-Link to the live application: [https://spw5235.github.io/behavioral-observation-of-students-in-schools](https://spw5235.github.io/behavioral-observation-of-students-in-schools).
+Link to the live application: [https://spwisner.github.io/behavioral-observation-of-students-in-schools](https://spwisner.github.io/behavioral-observation-of-students-in-schools).
 
-Link to the front-end repository: [https://github.com/spw5235/behavioral-observation-of-students-in-schools](https://github.com/spw5235/behavioral-observation-of-students-in-schools).
+Link to the front-end repository: [https://github.com/spwisner/behavioral-observation-of-students-in-schools](https://github.com/spwisner/behavioral-observation-of-students-in-schools).
 
 Link to the heroku api: [https://behav-obs-of-students.herokuapp.com/](https://behav-obs-of-students.herokuapp.com/).
 
