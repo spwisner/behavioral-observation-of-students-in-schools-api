@@ -20,9 +20,9 @@ class SessionsController < OpenReadController
     @session = current_user.sessions.build(session_params)
     @session.student = @student
 
-    if @session.obs_on == nil
-      @session.obs_on = DateTime.now.strftime('%Y-%m-%d')
-    end
+    # if @session.obs_on == nil
+    #   @session.obs_on = DateTime.now.strftime('%Y-%m-%d')
+    # end
 
     if @session.save
       render json: @session, status: :created, location: @session
