@@ -11,7 +11,7 @@ Link to the heroku api: [https://behav-obs-of-students.herokuapp.com/](https://b
 
 ## ERD
 
-The relationship of this api is one to many.  That is, one user can have many students, many settings, and many observations.  For a visualization of this relationship, view the following:
+The relationship of this api is one to many.  That is, one user can have many students, many sessions, and many observations.  For a visualization of this relationship, view the following:
 
 ![alt text](https://cloud.githubusercontent.com/assets/13546265/24553797/6aa48118-15f9-11e7-8647-911ac7f9e1b4.png "ERD")
 
@@ -42,14 +42,14 @@ One unsolved problem is how to limit a user from submitting vast amounts of text
 | POST   |                     `/students`                            | `students#create`     |
 | PATCH  |                   `/students/:id`                          | `students#update`     |
 | DELETE |                   `/students/:id`                          | `students#destroy`    |
-| GET    |            `/settings/:student_id/settings`                | `settings#index`      |
-| GET    |                   `/settings/:id`                          | `settings#show`       |
-| POST   |            `/students/:student_id/settings`                | `settings#create`     |
-| PATCH  |                  `/settings/:id`                           | `settings#update`     |
-| DELETE |                  `/settings/:id`                           | `settings#update`     |
-| GET    | `/students/:student_id/settings/:settings_id/observations` | `observations#index`  |
+| GET    |            `/sessions/:student_id/sessions`                | `sessions#index`      |
+| GET    |                   `/sessions/:id`                          | `sessions#show`       |
+| POST   |            `/students/:student_id/sessions`                | `sessions#create`     |
+| PATCH  |                  `/sessions/:id`                           | `sessions#update`     |
+| DELETE |                  `/sessions/:id`                           | `sessions#update`     |
+| GET    | `/students/:student_id/sessions/:sessions_id/observations` | `observations#index`  |
 | GET    |                `/observations/:id`                         | `observations#show`   |
-| POST   | `/students/:student_id/settings/:setting_id/observations`  | `observations#index`  |
+| POST   | `/students/:student_id/sessions/:session_id/observations`  | `observations#index`  |
 | PATCH  |                `/observations/:id`                         | `observations#update` |
 | DELETE |                `/observations/:id`                         | `observations#destroy`|
 
@@ -317,7 +317,7 @@ If the request is unsuccessful, the response will have an HTTP Status of 400 Bad
       {
         "id":1,
         "obs_on":"2017-03-30",
-        "obs_setting":"Outside",
+        "obs_session":"Outside",
         "obs_task":"Structured Play",
         "obs_time":15,
         "int_num":40,
@@ -329,7 +329,7 @@ If the request is unsuccessful, the response will have an HTTP Status of 400 Bad
       {
         "id":1,
         "obs_on":"2017-03-30",
-        "obs_setting":"Classroom",
+        "obs_session":"Classroom",
         "obs_task":"Reading",
         "obs_time":10,
         "int_num":40,
@@ -363,7 +363,7 @@ If the request is unsuccessful, the response will have an HTTP Status of 400 Bad
 
   {
     "obs_on":"2017-03-30",
-    "obs_setting":"Classroom",
+    "obs_session":"Classroom",
     "obs_task":"Reading",
     "obs_time":10,
     "int_num":40,
@@ -389,7 +389,7 @@ If the request is unsuccessful, the response will have an HTTP Status of 400 Bad
      "session": {
        "id":6,
        "obs_on":"2017-03-30",
-       "obs_setting":"Classroom",
+       "obs_session":"Classroom",
        "obs_task":"Reading",
        "obs_time":10,
        "int_num":40,
@@ -418,7 +418,7 @@ If the request is unsuccessful, the response will have an HTTP Status of 400 Bad
       "session": {
         "id": 2,
         "obs_on": "2016-02-01",
-        "obs_setting": "Classroom",
+        "obs_session": "Classroom",
         "obs_task": "Reading",
         "obs_time": "15",
         "int_num": "30",
